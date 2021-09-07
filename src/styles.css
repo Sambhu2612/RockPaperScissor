@@ -1,0 +1,192 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+
+header{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+header span{
+    font-family: 'Allison', cursive;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+header div{
+    width: fit-content;
+    margin: 0px auto;
+}
+
+header div span{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: #E62649;
+    font-weight: 400;
+}
+
+/* Score Section */
+
+section.score {
+    width: 90%;
+    height: 10vh;
+    margin: 0px auto;
+    margin-top: 7vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+section.score div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.score div span{
+    color: #9A9DA6;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+section.score div div{
+    color: #000;
+    height: fit-content;
+    font-size: 22px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+/* Visual Section */
+
+section.visual {
+    width: 90%;
+    height: 30vh;
+    margin: 0px auto;
+    margin-top: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.left_hand, div.right_hand {
+    width: 47.5%;
+    height: 100%;
+    border: 1px solid #e8ecf7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.right_hand .right_container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+section.visual div.left_hand div{
+    background: url(./images/left.png) no-repeat 50%;
+    height: 150px;
+    width: 80%;
+    background-size: contain;
+}
+
+section.visual div.right_hand div div{
+    background: url(./images/left.png) no-repeat 50%;
+    height: 150px;
+    width: 80%;
+    background-size: contain;
+    transform: scaleX(-1);
+    align-self: flex-end;
+}
+
+/* Play section */
+
+section.play{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.play button {
+    width: 25%;
+    background: transparent;
+    border: none;
+}
+
+/* Animation section */
+
+section.visual div.left_hand div.anim {
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-iteration-count: 2;
+    animation-name: play_left;
+}
+
+@keyframes play_left {
+    100%{
+        transform: rotateZ(-45deg);
+    }
+}
+
+section.visual div.right_hand div.anim {
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-iteration-count: 2;
+    animation-name: play_right;
+}
+
+@keyframes play_right {
+    100%{
+        transform: rotateZ(45deg);
+    }
+}
+
+
+/* Laptop Screen */
+
+@media (min-width:1920px){
+    header span {
+        font-size: 60px;
+    }
+
+    header div {
+        margin-top: 5vh;
+    }
+
+    header div span {
+        font-size: 22px;
+    }
+
+    section.score {
+        width: 35%;
+        height: 8vh;
+        margin-top: 3vh;
+    }
+
+    section.score div span {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    section.score div div {
+        font-size: 40px;
+    }
+
+    section.visual {
+        width: 35%;
+    }
+
+    section.play {
+        width: 30%;
+    }
+}
