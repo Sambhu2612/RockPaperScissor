@@ -154,7 +154,7 @@ section.visual div.right_hand div.anim {
 
 /* Laptop Screen */
 
-@media (min-width:1920px){
+@media (min-width:1600px){
     header span {
         font-size: 60px;
     }
